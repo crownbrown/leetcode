@@ -1,14 +1,17 @@
 import unittest
 
 def romanLookUp(s: str) -> int:
+    """Method for storing Roman to Int conversion dictionary and returning int"""
     roman_dict = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     return roman_dict[s]
 
+
 def romanSubtract(curr_ltr: str, next_ltr: str) -> int:
+    """Method for returning int result of Roman subtraction when passed two Roman
+    digits"""
     curr_int = romanLookUp(curr_ltr)
     next_int = romanLookUp(next_ltr)
     return next_int - curr_int
-
 
 
 def romanToInt(s: str) -> int:
@@ -34,7 +37,7 @@ def romanToInt(s: str) -> int:
             curr_int = romanLookUp(curr_ltr)
             total += curr_int
             idx += 1
-    if idx < str_lng:
+    if idx < str_lng:  # case last Roman digit if it is not Roman substraction
         curr_ltr = s[idx]
         curr_int = romanLookUp(curr_ltr)
         total += curr_int
