@@ -8,3 +8,9 @@ class TestCase(unittest.TestCase):
 
     def test1b(self):
         self.assertEqual(romanToInt('II'), 2)
+
+    def test1c(self):
+        self.assertEqual(romanToInt('III'), 3)
+
+    def test1d(self):
+        self.assertEqual(romanToInt('IV'), 4)
