@@ -34,10 +34,11 @@ def romanToInt(s: str) -> int:
             curr_int = romanLookUp(curr_ltr)
             total += curr_int
             idx += 1
-    curr_ltr = s[idx]
-    curr_int = romanLookUp(curr_ltr)
-    total += curr_int
-    idx += 1
+    if idx < str_lng:
+        curr_ltr = s[idx]
+        curr_int = romanLookUp(curr_ltr)
+        total += curr_int
+        idx += 1
     return total
 
 
