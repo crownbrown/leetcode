@@ -1,8 +1,8 @@
 import unittest
 
 
-def romanToInt(self, s: str) -> int:
-    return False
+def romanToInt(s: str) -> int:
+    return 1
 
 
 
